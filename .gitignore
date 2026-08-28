@@ -1,0 +1,19 @@
+# Simulation outputs
+*.vcd
+fifo_sim
+
+# Temporary/editor files
+*~
+*.bak
+*_backup.v
+
+# Generated Yosys files
+*.dot
+*.png
+
+# Temporary accidental files
+^exit
+echo
+
+# OpenLane generated runs
+runs/

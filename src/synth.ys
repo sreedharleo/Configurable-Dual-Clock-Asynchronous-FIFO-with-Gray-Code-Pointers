@@ -1,0 +1,21 @@
+read_verilog -sv async_fifo.v
+
+hierarchy -top async_fifo
+
+proc
+opt
+
+memory
+opt
+
+techmap
+opt
+
+abc -g simple
+opt
+
+stat
+
+write_verilog -noattr async_fifo_synth.v
+
+show -format dot -prefix async_fifo_netlist async_fifo
