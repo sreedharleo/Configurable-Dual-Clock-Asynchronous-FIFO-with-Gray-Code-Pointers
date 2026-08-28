@@ -1,0 +1,44 @@
+124. Printing statistics.
+
+=== async_fifo ===
+
+   Number of wires:                349
+   Number of wire bits:            550
+   Number of public wires:          49
+   Number of public wire bits:     243
+   Number of ports:                 13
+   Number of port bits:             35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                508
+     $_ANDNOT_                      72
+     $_AND_                          3
+     $_DFFE_PN0P_                    8
+     $_DFFE_PP_                    128
+     $_DFF_PN0_                     40
+     $_DFF_PN1_                      2
+     $_MUX_                        120
+     $_NAND_                         8
+     $_NOR_                          1
+     $_NOT_                         25
+     $_ORNOT_                        4
+     $_OR_                          33
+     $_XNOR_                        20
+     $_XOR_                         44
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_DFFE_PP_ is unknown!
+   Area for cell type $_DFF_PN0_ is unknown!
+   Area for cell type $_DFF_PN1_ is unknown!
+   Area for cell type $_DFFE_PN0P_ is unknown!
+

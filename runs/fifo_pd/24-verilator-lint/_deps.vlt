@@ -1,0 +1,5 @@
+`verilator_config
+lint_off -rule DECLFILENAME
+lint_off -rule EOFNEWLINE
+lint_off -rule UNDRIVEN -file "/home/angesh/async_fifo/runs/fifo_pd/tmp/7fe9a556b3ff466e9968822203c0348a.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/home/angesh/async_fifo/runs/fifo_pd/tmp/7fe9a556b3ff466e9968822203c0348a.bb.v"

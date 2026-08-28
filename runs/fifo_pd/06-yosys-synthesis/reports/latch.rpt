@@ -1,0 +1,14 @@
+
+15. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:178$3.$result' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$51'.
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:178$5.$result' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$51'.
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:178$5.gray' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$51'.
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:178$5.i' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$51'.
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:175$2.$result' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$42'.
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:175$4.$result' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$42'.
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:175$4.gray' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$42'.
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:175$4.i' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$42'.
+No latch inferred for signal `\async_fifo.\rd_bin_next' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:78$15'.
+No latch inferred for signal `\async_fifo.\rd_gray_next' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:78$15'.
+No latch inferred for signal `\async_fifo.\wr_bin_next' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:54$9'.
+No latch inferred for signal `\async_fifo.\wr_gray_next' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:54$9'.

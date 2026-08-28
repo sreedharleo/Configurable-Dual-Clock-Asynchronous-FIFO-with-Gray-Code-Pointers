@@ -1,0 +1,27 @@
+{
+    "nl": "/home/angesh/async_fifo/runs/RUN_2026-08-28_16-10-33/1-synthesis-area-1/async_fifo.nl.v",
+    "pnl": null,
+    "pnl-sdf-friendly": null,
+    "pnl-npc": null,
+    "def": null,
+    "lef": null,
+    "openroad-lef": null,
+    "odb": null,
+    "sdc": null,
+    "sdf": null,
+    "spef": null,
+    "lib": null,
+    "spice": null,
+    "mag": null,
+    "gds": null,
+    "mag_gds": null,
+    "klayout_gds": null,
+    "json_h": null,
+    "vh": null,
+    "metrics": {
+        "design__instance__count": 515,
+        "design__instance__area": 7928.8544,
+        "design__instance_unmapped__count": 0,
+        "synthesis__check_error__count": 0
+    }
+}

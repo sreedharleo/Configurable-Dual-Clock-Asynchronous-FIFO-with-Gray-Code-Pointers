@@ -1,0 +1,266 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+Startpoint: arst_n (input port clocked by wr_clk)
+Endpoint: _761_ (recovery check against rising-edge clock wr_clk)
+Path Group: asynchronous
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                                  0.000000    0.000000   clock wr_clk (rise edge)
+                                  0.000000    0.000000   clock network delay (propagated)
+                                  2.000000    2.000000 ^ input external delay
+     1    0.003809    0.024109    0.013864    2.013864 ^ arst_n (in)
+                                                         arst_n (net)
+                      0.024117    0.000000    2.013864 ^ input11/A (sky130_fd_sc_hd__clkbuf_1)
+     1    0.002820    0.044246    0.073481    2.087344 ^ input11/X (sky130_fd_sc_hd__clkbuf_1)
+                                                         net11 (net)
+                      0.044246    0.000090    2.087434 ^ fanout76/A (sky130_fd_sc_hd__buf_2)
+     5    0.031615    0.157972    0.188157    2.275591 ^ fanout76/X (sky130_fd_sc_hd__buf_2)
+                                                         net76 (net)
+                      0.157975    0.000662    2.276253 ^ fanout75/A (sky130_fd_sc_hd__buf_2)
+     6    0.035006    0.173691    0.237372    2.513626 ^ fanout75/X (sky130_fd_sc_hd__buf_2)
+                                                         net75 (net)
+                      0.173755    0.000438    2.514063 ^ fanout74/A (sky130_fd_sc_hd__buf_2)
+     7    0.034948    0.173902    0.242448    2.756511 ^ fanout74/X (sky130_fd_sc_hd__buf_2)
+                                                         net74 (net)
+                      0.173902    0.000655    2.757166 ^ fanout73/A (sky130_fd_sc_hd__clkbuf_4)
+    10    0.044687    0.142137    0.251840    3.009006 ^ fanout73/X (sky130_fd_sc_hd__clkbuf_4)
+                                                         net73 (net)
+                      0.142137    0.000559    3.009565 ^ fanout72/A (sky130_fd_sc_hd__clkbuf_4)
+    10    0.045118    0.143003    0.242649    3.252214 ^ fanout72/X (sky130_fd_sc_hd__clkbuf_4)
+                                                         net72 (net)
+                      0.143011    0.001219    3.253434 ^ _761_/RESET_B (sky130_fd_sc_hd__dfrtp_4)
+                                              3.253434   data arrival time
+
+                                 10.000000   10.000000   clock wr_clk (rise edge)
+                                  0.000000   10.000000   clock source latency
+     1    0.018647    0.089459    0.062151   10.062151 ^ wr_clk (in)
+                                                         wr_clk (net)
+                      0.089506    0.000000   10.062151 ^ clkbuf_0_wr_clk/A (sky130_fd_sc_hd__clkbuf_16)
+    16    0.093231    0.109238    0.196547   10.258698 ^ clkbuf_0_wr_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_0_wr_clk (net)
+                      0.109377    0.002593   10.261291 ^ clkbuf_4_14_0_wr_clk/A (sky130_fd_sc_hd__clkbuf_8)
+     6    0.033942    0.072416    0.172901   10.434192 ^ clkbuf_4_14_0_wr_clk/X (sky130_fd_sc_hd__clkbuf_8)
+                                                         clknet_4_14_0_wr_clk (net)
+                      0.072421    0.000675   10.434867 ^ _761_/CLK (sky130_fd_sc_hd__dfrtp_4)
+                                 -0.250000   10.184867   clock uncertainty
+                                  0.000000   10.184867   clock reconvergence pessimism
+                                  0.194070   10.378936   library recovery time
+                                             10.378936   data required time
+---------------------------------------------------------------------------------------------
+                                             10.378936   data required time
+                                             -3.253434   data arrival time
+---------------------------------------------------------------------------------------------
+                                              7.125503   slack (MET)
+
+
+Startpoint: wr_en (input port clocked by wr_clk)
+Endpoint: _755_ (rising edge-triggered flip-flop clocked by wr_clk)
+Path Group: wr_clk
+Path Type: max
+
+Fanout         Cap        Slew       Delay        Time   Description
+---------------------------------------------------------------------------------------------
+                                  0.000000    0.000000   clock wr_clk (rise edge)
+                                  0.000000    0.000000   clock network delay (propagated)
+                                  2.000000    2.000000 ^ input external delay
+     1    0.004025    0.025054    0.014630    2.014630 ^ wr_en (in)
+                                                         wr_en (net)
+                      0.025054    0.000000    2.014630 ^ input22/A (sky130_fd_sc_hd__clkbuf_1)
+     1    0.003159    0.047933    0.076607    2.091236 ^ input22/X (sky130_fd_sc_hd__clkbuf_1)
+                                                         net22 (net)
+                      0.047933    0.000083    2.091319 ^ _379_/B (sky130_fd_sc_hd__and2b_1)
+     5    0.013026    0.126147    0.179039    2.270358 ^ _379_/X (sky130_fd_sc_hd__and2b_1)
+                                                         _208_ (net)
+                      0.126147    0.000392    2.270750 ^ _383_/C (sky130_fd_sc_hd__and3_2)
+     5    0.019437    0.116096    0.256581    2.527331 ^ _383_/X (sky130_fd_sc_hd__and3_2)
+                                                         _211_ (net)
+                      0.116097    0.000591    2.527922 ^ _387_/B (sky130_fd_sc_hd__and2_1)
+     4    0.019818    0.200178    0.249226    2.777148 ^ _387_/X (sky130_fd_sc_hd__and2_1)
+                                                         _214_ (net)
+                      0.200178    0.000251    2.777399 ^ _400_/B (sky130_fd_sc_hd__nand2_1)
+     2    0.013901    0.115637    0.149829    2.927229 v _400_/Y (sky130_fd_sc_hd__nand2_1)
+                                                         _222_ (net)
+                      0.115637    0.000252    2.927480 v fanout35/A (sky130_fd_sc_hd__buf_4)
+    10    0.059762    0.084422    0.225375    3.152856 v fanout35/X (sky130_fd_sc_hd__buf_4)
+                                                         net35 (net)
+                      0.084450    0.001529    3.154385 v _401_/B (sky130_fd_sc_hd__xnor2_1)
+     1    0.003515    0.129247    0.152393    3.306778 ^ _401_/Y (sky130_fd_sc_hd__xnor2_1)
+                                                         _223_ (net)
+                      0.129247    0.000117    3.306894 ^ _402_/B (sky130_fd_sc_hd__nand2_1)
+     1    0.002483    0.041901    0.065767    3.372662 v _402_/Y (sky130_fd_sc_hd__nand2_1)
+                                                         _224_ (net)
+                      0.041901    0.000078    3.372739 v _403_/C (sky130_fd_sc_hd__or4b_1)
+     1    0.003218    0.086106    0.463651    3.836390 v _403_/X (sky130_fd_sc_hd__or4b_1)
+                                                         _225_ (net)
+                      0.086106    0.000105    3.836495 v _404_/B (sky130_fd_sc_hd__nor2_1)
+     1    0.004136    0.098931    0.113459    3.949954 ^ _404_/Y (sky130_fd_sc_hd__nor2_1)
+                                                         full_next (net)
+                      0.098931    0.000159    3.950112 ^ _755_/D (sky130_fd_sc_hd__dfrtp_1)
+                                              3.950112   data arrival time
+
+                                 10.000000   10.000000   clock wr_clk (rise edge)
+                                  0.000000   10.000000   clock source latency
+     1    0.018647    0.089459    0.062151   10.062151 ^ wr_clk (in)
+                                                         wr_clk (net)
+                      0.089506    0.000000   10.062151 ^ clkbuf_0_wr_clk/A (sky130_fd_sc_hd__clkbuf_16)
+    16    0.093231    0.109238    0.196547   10.258698 ^ clkbuf_0_wr_clk/X (sky130_fd_sc_hd__clkbuf_16)
+                                                         clknet_0_wr_clk (net)
+                      0.109292    0.002299   10.260997 ^ clkbuf_4_13_0_wr_clk/A (sky130_fd_sc_hd__clkbuf_8)
+     8    0.036995    0.077173    0.176521   10.437518 ^ clkbuf_4_13_0_wr_clk/X (sky130_fd_sc_hd__clkbuf_8)
+                                                         clknet_4_13_0_wr_clk (net)
+                      0.077189    0.001104   10.438622 ^ _755_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                                 -0.250000   10.188622   clock uncertainty
+                                  0.000000   10.188622   clock reconvergence pessimism
+                                 -0.067352   10.121269   library setup time
+                                             10.121269   data required time
+---------------------------------------------------------------------------------------------
+                                             10.121269   data required time
+                                             -3.950112   data arrival time
+---------------------------------------------------------------------------------------------
+                                              6.171157   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= nom_tt_025C_1v80 Corner ===================================
+
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+clkbuf_0_wr_clk/X                        10     16     -6 (VIOLATED)
+clkbuf_4_0_0_wr_clk/X                    10     14     -4 (VIOLATED)
+clkbuf_4_1_0_wr_clk/X                    10     14     -4 (VIOLATED)
+clkbuf_4_5_0_wr_clk/X                    10     14     -4 (VIOLATED)
+clkbuf_4_10_0_wr_clk/X                   10     13     -3 (VIOLATED)
+clkbuf_4_2_0_wr_clk/X                    10     13     -3 (VIOLATED)
+clkbuf_4_4_0_wr_clk/X                    10     13     -3 (VIOLATED)
+clkbuf_4_7_0_wr_clk/X                    10     11        (VIOLATED)
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 15 unannotated drivers.
+ clkload0/X
+ clkload1/X
+ clkload10/Y
+ clkload11/Y
+ clkload12/Y
+ clkload13/Y
+ clkload14/Y
+ clkload2/X
+ clkload3/Y
+ clkload4/X
+ clkload5/Y
+ clkload6/Y
+ clkload7/Y
+ clkload8/Y
+ clkload9/X
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+Writing metric design__max_slew_violation__count__corner:nom_tt_025C_1v80: 0
+max fanout violation count 8
+Writing metric design__max_fanout_violation__count__corner:nom_tt_025C_1v80: 8
+max cap violation count 0
+Writing metric design__max_cap_violation__count__corner:nom_tt_025C_1v80: 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 29 unclocked register/latch pins.
+  _632_/CLK
+  _633_/CLK
+  _634_/CLK
+  _635_/CLK
+  _636_/CLK
+  _637_/CLK
+  _638_/CLK
+  _639_/CLK
+  _736_/CLK
+  _745_/CLK
+  _746_/CLK
+  _747_/CLK
+  _748_/CLK
+  _749_/CLK
+  _750_/CLK
+  _751_/CLK
+  _752_/CLK
+  _753_/CLK
+  _754_/CLK
+  _774_/CLK
+  _775_/CLK
+  _776_/CLK
+  _777_/CLK
+  _778_/CLK
+  _779_/CLK
+  _780_/CLK
+  _781_/CLK
+  _782_/CLK
+  _783_/CLK
+Warning: There are 44 unconstrained endpoints.
+  aempty
+  empty
+  rd_data[0]
+  rd_data[1]
+  rd_data[2]
+  rd_data[3]
+  rd_data[4]
+  rd_data[5]
+  rd_data[6]
+  rd_data[7]
+  _632_/D
+  _633_/D
+  _634_/D
+  _635_/D
+  _636_/D
+  _637_/D
+  _638_/D
+  _639_/D
+  _736_/D
+  _745_/D
+  _746_/D
+  _747_/D
+  _748_/D
+  _749_/D
+  _750_/D
+  _751_/D
+  _752_/D
+  _753_/D
+  _754_/D
+  _774_/D
+  _775_/D
+  _776_/D
+  _777_/D
+  _778_/D
+  _779_/D
+  _780_/D
+  _781_/D
+  _782_/D
+  _783_/D
+  _784_/D
+  _785_/D
+  _786_/D
+  _787_/D
+  _788_/D

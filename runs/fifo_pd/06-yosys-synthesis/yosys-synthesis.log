@@ -1,0 +1,1336 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)
+Loaded SDC plugin
+
+1. Executing Liberty frontend: /home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Imported 428 cell types from liberty file.
+[INFO] Using SDC file '/home/angesh/async_fifo/runs/fifo_pd/06-yosys-synthesis/synthesis.abc.sdc' for ABC…
+
+2. Executing Verilog-2005 frontend: /home/angesh/async_fifo/src/async_fifo.v
+Parsing SystemVerilog input from `/home/angesh/async_fifo/src/async_fifo.v' to AST representation.
+Storing AST representation for module `$abstract\async_fifo'.
+Successfully finished Verilog frontend.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+4. Executing AST frontend in derive mode using pre-parsed AST for module `\async_fifo'.
+Generating RTLIL representation for module `\async_fifo'.
+
+4.1. Analyzing design hierarchy..
+Top module:  \async_fifo
+
+4.2. Analyzing design hierarchy..
+Top module:  \async_fifo
+Removing unused module `$abstract\async_fifo'.
+Removed 1 unused modules.
+Renaming module async_fifo to async_fifo.
+
+5. Generating Graphviz representation of design.
+Writing dot description to `/home/angesh/async_fifo/runs/fifo_pd/06-yosys-synthesis/hierarchy.dot'.
+Dumping module async_fifo to page 1.
+
+6. Executing TRIBUF pass.
+
+7. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1. Analyzing design hierarchy..
+Top module:  \async_fifo
+
+7.2. Analyzing design hierarchy..
+Top module:  \async_fifo
+Removed 0 unused modules.
+
+8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+9. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/angesh/async_fifo/src/async_fifo.v:348$35 in module async_fifo.
+Marked 1 switch rules as full_case in process $proc$/home/angesh/async_fifo/src/async_fifo.v:310$32 in module async_fifo.
+Marked 1 switch rules as full_case in process $proc$/home/angesh/async_fifo/src/async_fifo.v:277$30 in module async_fifo.
+Marked 1 switch rules as full_case in process $proc$/home/angesh/async_fifo/src/async_fifo.v:124$21 in module async_fifo.
+Marked 1 switch rules as full_case in process $proc$/home/angesh/async_fifo/src/async_fifo.v:97$19 in module async_fifo.
+Removed a total of 0 dead cases.
+
+10. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 12 redundant assignments.
+Promoted 23 assignments to connections.
+
+11. Executing PROC_INIT pass (extract init attributes).
+
+12. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \arst_n in `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:310$32'.
+Found async reset \arst_n in `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:277$30'.
+Found async reset \arst_n in `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:124$21'.
+Found async reset \arst_n in `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:97$19'.
+
+13. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~2 debug messages>
+
+14. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$51'.
+Creating decoders for process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$42'.
+Creating decoders for process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:348$35'.
+     1/3: $1$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_EN[7:0]$41
+     2/3: $1$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_DATA[7:0]$40
+     3/3: $1$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_ADDR[3:0]$39
+Creating decoders for process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:310$32'.
+     1/5: $0\aempty[0:0]
+     2/5: $0\empty[0:0]
+     3/5: $0\rd_gray[4:0]
+     4/5: $0\rd_bin[4:0]
+     5/5: $0\rd_data[7:0]
+Creating decoders for process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:277$30'.
+     1/4: $0\afull[0:0]
+     2/4: $0\full[0:0]
+     3/4: $0\wr_gray[4:0]
+     4/4: $0\wr_bin[4:0]
+Creating decoders for process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:124$21'.
+     1/2: $0\wr_gray_sync2[4:0]
+     2/2: $0\wr_gray_sync1[4:0]
+Creating decoders for process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:97$19'.
+     1/2: $0\rd_gray_sync2[4:0]
+     2/2: $0\rd_gray_sync1[4:0]
+Creating decoders for process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:78$15'.
+Creating decoders for process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:54$9'.
+
+15. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:178$3.$result' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$51'.
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:178$5.$result' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$51'.
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:178$5.gray' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$51'.
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:178$5.i' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$51'.
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:175$2.$result' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$42'.
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:175$4.$result' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$42'.
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:175$4.gray' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$42'.
+No latch inferred for signal `\async_fifo.\gray_to_binary$func$/home/angesh/async_fifo/src/async_fifo.v:175$4.i' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$42'.
+No latch inferred for signal `\async_fifo.\rd_bin_next' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:78$15'.
+No latch inferred for signal `\async_fifo.\rd_gray_next' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:78$15'.
+No latch inferred for signal `\async_fifo.\wr_bin_next' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:54$9'.
+No latch inferred for signal `\async_fifo.\wr_gray_next' from process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:54$9'.
+
+16. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\async_fifo.$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_ADDR' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:348$35'.
+  created $dff cell `$procdff$71' with positive edge clock.
+Creating register for signal `\async_fifo.$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_DATA' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:348$35'.
+  created $dff cell `$procdff$72' with positive edge clock.
+Creating register for signal `\async_fifo.$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_EN' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:348$35'.
+  created $dff cell `$procdff$73' with positive edge clock.
+Creating register for signal `\async_fifo.\rd_data' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:310$32'.
+  created $adff cell `$procdff$78' with positive edge clock and positive level reset.
+Creating register for signal `\async_fifo.\empty' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:310$32'.
+  created $adff cell `$procdff$83' with positive edge clock and positive level reset.
+Creating register for signal `\async_fifo.\aempty' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:310$32'.
+  created $adff cell `$procdff$88' with positive edge clock and positive level reset.
+Creating register for signal `\async_fifo.\rd_bin' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:310$32'.
+  created $adff cell `$procdff$93' with positive edge clock and positive level reset.
+Creating register for signal `\async_fifo.\rd_gray' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:310$32'.
+  created $adff cell `$procdff$98' with positive edge clock and positive level reset.
+Creating register for signal `\async_fifo.\full' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:277$30'.
+  created $adff cell `$procdff$103' with positive edge clock and positive level reset.
+Creating register for signal `\async_fifo.\afull' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:277$30'.
+  created $adff cell `$procdff$108' with positive edge clock and positive level reset.
+Creating register for signal `\async_fifo.\wr_bin' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:277$30'.
+  created $adff cell `$procdff$113' with positive edge clock and positive level reset.
+Creating register for signal `\async_fifo.\wr_gray' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:277$30'.
+  created $adff cell `$procdff$118' with positive edge clock and positive level reset.
+Creating register for signal `\async_fifo.\wr_gray_sync1' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:124$21'.
+  created $adff cell `$procdff$123' with positive edge clock and positive level reset.
+Creating register for signal `\async_fifo.\wr_gray_sync2' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:124$21'.
+  created $adff cell `$procdff$128' with positive edge clock and positive level reset.
+Creating register for signal `\async_fifo.\rd_gray_sync1' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:97$19'.
+  created $adff cell `$procdff$133' with positive edge clock and positive level reset.
+Creating register for signal `\async_fifo.\rd_gray_sync2' using process `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:97$19'.
+  created $adff cell `$procdff$138' with positive edge clock and positive level reset.
+
+17. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+18. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$51'.
+Removing empty process `async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:0$42'.
+Found and cleaned up 1 empty switch in `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:348$35'.
+Removing empty process `async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:348$35'.
+Found and cleaned up 1 empty switch in `\async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:310$32'.
+Removing empty process `async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:310$32'.
+Removing empty process `async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:277$30'.
+Removing empty process `async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:124$21'.
+Removing empty process `async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:97$19'.
+Removing empty process `async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:78$15'.
+Removing empty process `async_fifo.$proc$/home/angesh/async_fifo/src/async_fifo.v:54$9'.
+Cleaned up 2 empty switches.
+
+19. Executing CHECK pass (checking for obvious problems).
+Checking module async_fifo...
+Found and reported 0 problems.
+
+20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+<suppressed ~28 debug messages>
+
+21. Executing FLATTEN pass (flatten design).
+
+22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+23. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+Removed 20 unused cells and 95 unused wires.
+<suppressed ~21 debug messages>
+
+24. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+25. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+26. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+27. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \async_fifo.
+    Consolidated identical input bits for $mux cell $procmux$61:
+      Old ports: A=8'00000000, B=8'11111111, Y=$0$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_EN[7:0]$38
+      New ports: A=1'0, B=1'1, Y=$0$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_EN[7:0]$38 [0]
+      New connections: $0$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_EN[7:0]$38 [7:1] = { $0$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_EN[7:0]$38 [0] $0$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_EN[7:0]$38 [0] $0$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_EN[7:0]$38 [0] $0$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_EN[7:0]$38 [0] $0$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_EN[7:0]$38 [0] $0$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_EN[7:0]$38 [0] $0$memwr$\mem$/home/angesh/async_fifo/src/async_fifo.v:352$6_EN[7:0]$38 [0] }
+  Optimizing cells in module \async_fifo.
+Performed a total of 1 changes.
+
+28. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+29. Executing OPT_DFF pass (perform DFF optimizations).
+
+30. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+
+31. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+32. Rerunning OPT passes. (Maybe there is more to do…)
+
+33. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+34. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \async_fifo.
+Performed a total of 0 changes.
+
+35. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+36. Executing OPT_DFF pass (perform DFF optimizations).
+
+37. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+
+38. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+39. Executing FSM pass (extract and optimize FSM).
+
+39.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+39.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+39.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+39.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+
+39.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+39.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+39.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+39.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+40. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+41. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+42. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+43. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \async_fifo.
+Performed a total of 0 changes.
+
+44. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+45. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$78 ($adff) from module async_fifo (D = $memrd$\mem$/home/angesh/async_fifo/src/async_fifo.v:334$34_DATA, Q = \rd_data).
+
+46. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+47. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+48. Rerunning OPT passes. (Maybe there is more to do…)
+
+49. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+50. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \async_fifo.
+Performed a total of 0 changes.
+
+51. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+52. Executing OPT_DFF pass (perform DFF optimizations).
+
+53. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+
+54. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+55. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 5) from port B of cell async_fifo.$xor$/home/angesh/async_fifo/src/async_fifo.v:59$12 ($xor).
+Removed top 1 bits (of 5) from port B of cell async_fifo.$xor$/home/angesh/async_fifo/src/async_fifo.v:83$18 ($xor).
+
+56. Executing PEEPOPT pass (run peephole optimizers).
+
+57. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+
+58. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module async_fifo:
+  creating $macc model for $add$/home/angesh/async_fifo/src/async_fifo.v:56$10 ($add).
+  creating $macc model for $add$/home/angesh/async_fifo/src/async_fifo.v:80$16 ($add).
+  creating $macc model for $sub$/home/angesh/async_fifo/src/async_fifo.v:227$26 ($sub).
+  creating $macc model for $sub$/home/angesh/async_fifo/src/async_fifo.v:230$27 ($sub).
+  creating $alu model for $macc $sub$/home/angesh/async_fifo/src/async_fifo.v:230$27.
+  creating $alu model for $macc $sub$/home/angesh/async_fifo/src/async_fifo.v:227$26.
+  creating $alu model for $macc $add$/home/angesh/async_fifo/src/async_fifo.v:80$16.
+  creating $alu model for $macc $add$/home/angesh/async_fifo/src/async_fifo.v:56$10.
+  creating $alu model for $ge$/home/angesh/async_fifo/src/async_fifo.v:248$28 ($ge): new $alu
+  creating $alu model for $le$/home/angesh/async_fifo/src/async_fifo.v:265$29 ($le): new $alu
+  creating $alu cell for $le$/home/angesh/async_fifo/src/async_fifo.v:265$29: $auto$alumacc.cc:485:replace_alu$143
+  creating $alu cell for $ge$/home/angesh/async_fifo/src/async_fifo.v:248$28: $auto$alumacc.cc:485:replace_alu$152
+  creating $alu cell for $add$/home/angesh/async_fifo/src/async_fifo.v:56$10: $auto$alumacc.cc:485:replace_alu$165
+  creating $alu cell for $add$/home/angesh/async_fifo/src/async_fifo.v:80$16: $auto$alumacc.cc:485:replace_alu$168
+  creating $alu cell for $sub$/home/angesh/async_fifo/src/async_fifo.v:227$26: $auto$alumacc.cc:485:replace_alu$171
+  creating $alu cell for $sub$/home/angesh/async_fifo/src/async_fifo.v:230$27: $auto$alumacc.cc:485:replace_alu$174
+  created 6 $alu and 0 $macc cells.
+
+59. Executing SHARE pass (SAT-based resource sharing).
+
+60. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+61. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+62. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+63. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \async_fifo.
+Performed a total of 0 changes.
+
+64. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+65. Executing OPT_DFF pass (perform DFF optimizations).
+
+66. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+67. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+68. Rerunning OPT passes. (Maybe there is more to do…)
+
+69. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+70. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \async_fifo.
+Performed a total of 0 changes.
+
+71. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+72. Executing OPT_DFF pass (perform DFF optimizations).
+
+73. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+
+74. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+75. Executing MEMORY pass.
+
+75.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+75.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+75.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing async_fifo.mem write port 0.
+
+75.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+75.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\mem'[0] in module `\async_fifo': merging output FF to cell.
+
+75.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+Removed 1 unused cells and 9 unused wires.
+<suppressed ~2 debug messages>
+
+75.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+75.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+75.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+
+75.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+76. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+
+77. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+<suppressed ~13 debug messages>
+
+78. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+79. Executing OPT_DFF pass (perform DFF optimizations).
+
+80. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+Removed 0 unused cells and 7 unused wires.
+<suppressed ~1 debug messages>
+
+81. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \mem in module \async_fifo:
+  created 16 $dff cells and 0 static cells of width 8.
+Extracted data FF from read port 0 of async_fifo.mem: $\mem$rdreg[0]
+  read interface: 1 $dff and 15 $mux cells.
+  write interface: 16 write mux blocks.
+
+82. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+<suppressed ~9 debug messages>
+
+83. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+84. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~17 debug messages>
+
+85. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \async_fifo.
+Performed a total of 0 changes.
+
+86. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+87. Executing OPT_SHARE pass.
+
+88. Executing OPT_DFF pass (perform DFF optimizations).
+
+89. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+Removed 1 unused cells and 37 unused wires.
+<suppressed ~2 debug messages>
+
+90. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+91. Rerunning OPT passes. (Maybe there is more to do…)
+
+92. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~17 debug messages>
+
+93. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \async_fifo.
+Performed a total of 0 changes.
+
+94. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+95. Executing OPT_SHARE pass.
+
+96. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\mem[9]$212 ($dff) from module async_fifo (D = \wr_data, Q = \mem[9]).
+Adding EN signal on $memory\mem[8]$210 ($dff) from module async_fifo (D = \wr_data, Q = \mem[8]).
+Adding EN signal on $memory\mem[7]$208 ($dff) from module async_fifo (D = \wr_data, Q = \mem[7]).
+Adding EN signal on $memory\mem[6]$206 ($dff) from module async_fifo (D = \wr_data, Q = \mem[6]).
+Adding EN signal on $memory\mem[5]$204 ($dff) from module async_fifo (D = \wr_data, Q = \mem[5]).
+Adding EN signal on $memory\mem[4]$202 ($dff) from module async_fifo (D = \wr_data, Q = \mem[4]).
+Adding EN signal on $memory\mem[3]$200 ($dff) from module async_fifo (D = \wr_data, Q = \mem[3]).
+Adding EN signal on $memory\mem[2]$198 ($dff) from module async_fifo (D = \wr_data, Q = \mem[2]).
+Adding EN signal on $memory\mem[1]$196 ($dff) from module async_fifo (D = \wr_data, Q = \mem[1]).
+Adding EN signal on $memory\mem[15]$224 ($dff) from module async_fifo (D = \wr_data, Q = \mem[15]).
+Adding EN signal on $memory\mem[14]$222 ($dff) from module async_fifo (D = \wr_data, Q = \mem[14]).
+Adding EN signal on $memory\mem[13]$220 ($dff) from module async_fifo (D = \wr_data, Q = \mem[13]).
+Adding EN signal on $memory\mem[12]$218 ($dff) from module async_fifo (D = \wr_data, Q = \mem[12]).
+Adding EN signal on $memory\mem[11]$216 ($dff) from module async_fifo (D = \wr_data, Q = \mem[11]).
+Adding EN signal on $memory\mem[10]$214 ($dff) from module async_fifo (D = \wr_data, Q = \mem[10]).
+Adding EN signal on $memory\mem[0]$194 ($dff) from module async_fifo (D = \wr_data, Q = \mem[0]).
+
+97. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+Removed 16 unused cells and 16 unused wires.
+<suppressed ~17 debug messages>
+
+98. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+99. Rerunning OPT passes. (Maybe there is more to do…)
+
+100. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \async_fifo..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+101. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \async_fifo.
+Performed a total of 0 changes.
+
+102. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+103. Executing OPT_SHARE pass.
+
+104. Executing OPT_DFF pass (perform DFF optimizations).
+
+105. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+
+106. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+107. Executing TECHMAP pass (map to technology primitives).
+
+107.1. Executing Verilog-2005 frontend: /nix/store/9r0bh7sp051dpm8km8bqlb028anpd3v3-yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/nix/store/9r0bh7sp051dpm8km8bqlb028anpd3v3-yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+107.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $logic_and.
+Using template $paramod$672a140277c71df8314410f22acc08d55222c3c7\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod$b18e16801adf491a64caa0542270798e5d4ac6b6\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+No more expansions possible.
+<suppressed ~466 debug messages>
+
+108. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+<suppressed ~78 debug messages>
+
+109. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+<suppressed ~45 debug messages>
+Removed a total of 15 cells.
+
+110. Executing OPT_DFF pass (perform DFF optimizations).
+
+111. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+Removed 23 unused cells and 181 unused wires.
+<suppressed ~24 debug messages>
+
+112. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+113. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+114. Executing OPT_DFF pass (perform DFF optimizations).
+
+115. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+
+116. Executing ABC pass (technology mapping using ABC).
+
+116.1. Extracting gate netlist of module `\async_fifo' to `<abc-temp-dir>/input.blif'..
+Extracted 344 gates and 506 wires to a netlist network with 162 inputs and 47 outputs.
+
+116.1.1. Executing ABC.
+Running ABC command: "/nix/store/6l3aj1gi4lja8z5s4lan2k2cfz9mqkrz-yosys-abc/bin/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+116.1.2. Re-integrating ABC results.
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:               AND cells:        3
+ABC RESULTS:               XOR cells:       44
+ABC RESULTS:              XNOR cells:       20
+ABC RESULTS:               MUX cells:      120
+ABC RESULTS:               NOT cells:       25
+ABC RESULTS:              NAND cells:        8
+ABC RESULTS:             ORNOT cells:        4
+ABC RESULTS:                OR cells:       33
+ABC RESULTS:            ANDNOT cells:       72
+ABC RESULTS:        internal signals:      297
+ABC RESULTS:           input signals:      162
+ABC RESULTS:          output signals:       47
+Removing temp directory.
+
+117. Executing OPT pass (performing simple optimizations).
+
+117.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+<suppressed ~56 debug messages>
+
+117.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+117.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+117.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+Removed 0 unused cells and 315 unused wires.
+<suppressed ~4 debug messages>
+
+117.5. Finished fast OPT passes.
+
+118. Executing HIERARCHY pass (managing design hierarchy).
+
+118.1. Analyzing design hierarchy..
+Top module:  \async_fifo
+
+118.2. Analyzing design hierarchy..
+Top module:  \async_fifo
+Removed 0 unused modules.
+
+119. Executing CHECK pass (checking for obvious problems).
+Checking module async_fifo...
+Found and reported 0 problems.
+
+120. Printing statistics.
+
+=== async_fifo ===
+
+   Number of wires:                353
+   Number of wire bits:            624
+   Number of public wires:          53
+   Number of public wire bits:     317
+   Number of ports:                 13
+   Number of port bits:             35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                508
+     $_ANDNOT_                      72
+     $_AND_                          3
+     $_DFFE_PN0P_                    8
+     $_DFFE_PP_                    128
+     $_DFF_PN0_                     40
+     $_DFF_PN1_                      2
+     $_MUX_                        120
+     $_NAND_                         8
+     $_NOR_                          1
+     $_NOT_                         25
+     $_ORNOT_                        4
+     $_OR_                          33
+     $_XNOR_                        20
+     $_XOR_                         44
+
+121. Generating Graphviz representation of design.
+Writing dot description to `/home/angesh/async_fifo/runs/fifo_pd/06-yosys-synthesis/primitive_techmap.dot'.
+Dumping module async_fifo to page 1.
+
+122. Executing OPT pass (performing simple optimizations).
+
+122.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+122.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+122.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \async_fifo..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+122.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \async_fifo.
+Performed a total of 0 changes.
+
+122.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\async_fifo'.
+Removed a total of 0 cells.
+
+122.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+122.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+
+122.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module async_fifo.
+
+122.9. Finished OPT passes. (There is nothing left to do.)
+
+123. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~4 debug messages>
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/angesh/async_fifo/runs/fifo_pd/tmp/a6e10b224c1b47cdb8cec12c9825f6e1.lib ",
+   "modules": {
+      "\\async_fifo": {
+         "num_wires":         349,
+         "num_wire_bits":     550,
+         "num_pub_wires":     49,
+         "num_pub_wire_bits": 243,
+         "num_ports":         13,
+         "num_port_bits":     35,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         508,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 72,
+            "$_AND_": 3,
+            "$_DFFE_PN0P_": 8,
+            "$_DFFE_PP_": 128,
+            "$_DFF_PN0_": 40,
+            "$_DFF_PN1_": 2,
+            "$_MUX_": 120,
+            "$_NAND_": 8,
+            "$_NOR_": 1,
+            "$_NOT_": 25,
+            "$_ORNOT_": 4,
+            "$_OR_": 33,
+            "$_XNOR_": 20,
+            "$_XOR_": 44
+         }
+      }
+   },
+      "design": {
+         "num_wires":         349,
+         "num_wire_bits":     550,
+         "num_pub_wires":     49,
+         "num_pub_wire_bits": 243,
+         "num_ports":         13,
+         "num_port_bits":     35,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         508,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 72,
+            "$_AND_": 3,
+            "$_DFFE_PN0P_": 8,
+            "$_DFFE_PP_": 128,
+            "$_DFF_PN0_": 40,
+            "$_DFF_PN1_": 2,
+            "$_MUX_": 120,
+            "$_NAND_": 8,
+            "$_NOR_": 1,
+            "$_NOT_": 25,
+            "$_ORNOT_": 4,
+            "$_OR_": 33,
+            "$_XNOR_": 20,
+            "$_XOR_": 44
+         }
+      }
+}
+
+124. Printing statistics.
+
+=== async_fifo ===
+
+   Number of wires:                349
+   Number of wire bits:            550
+   Number of public wires:          49
+   Number of public wire bits:     243
+   Number of ports:                 13
+   Number of port bits:             35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                508
+     $_ANDNOT_                      72
+     $_AND_                          3
+     $_DFFE_PN0P_                    8
+     $_DFFE_PP_                    128
+     $_DFF_PN0_                     40
+     $_DFF_PN1_                      2
+     $_MUX_                        120
+     $_NAND_                         8
+     $_NOR_                          1
+     $_NOT_                         25
+     $_ORNOT_                        4
+     $_OR_                          33
+     $_XNOR_                        20
+     $_XOR_                         44
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_DFFE_PP_ is unknown!
+   Area for cell type $_DFF_PN0_ is unknown!
+   Area for cell type $_DFF_PN1_ is unknown!
+   Area for cell type $_DFFE_PN0P_ is unknown!
+
+[INFO] Applying tri-state buffer mapping from '/home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v'…
+
+125. Executing TECHMAP pass (map to technology primitives).
+
+125.1. Executing Verilog-2005 frontend: /home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+125.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+126. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+[INFO] Applying latch mapping from '/home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v'…
+
+127. Executing TECHMAP pass (map to technology primitives).
+
+127.1. Executing Verilog-2005 frontend: /home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+127.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+128. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+129. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+129.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\async_fifo':
+  mapped 48 $_DFF_PN0_ cells to \sky130_fd_sc_hd__dfrtp_2 cells.
+  mapped 2 $_DFF_PN1_ cells to \sky130_fd_sc_hd__dfstp_2 cells.
+  mapped 128 $_DFF_P_ cells to \sky130_fd_sc_hd__dfxtp_2 cells.
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/angesh/async_fifo/runs/fifo_pd/tmp/a6e10b224c1b47cdb8cec12c9825f6e1.lib ",
+   "modules": {
+      "\\async_fifo": {
+         "num_wires":         485,
+         "num_wire_bits":     686,
+         "num_pub_wires":     49,
+         "num_pub_wire_bits": 243,
+         "num_ports":         13,
+         "num_port_bits":     35,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         644,
+         "area":              4036.371200,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 72,
+            "$_AND_": 3,
+            "$_MUX_": 256,
+            "$_NAND_": 8,
+            "$_NOR_": 1,
+            "$_NOT_": 25,
+            "$_ORNOT_": 4,
+            "$_OR_": 33,
+            "$_XNOR_": 20,
+            "$_XOR_": 44,
+            "sky130_fd_sc_hd__dfrtp_2": 48,
+            "sky130_fd_sc_hd__dfstp_2": 2,
+            "sky130_fd_sc_hd__dfxtp_2": 128
+         }
+      }
+   },
+      "design": {
+         "num_wires":         485,
+         "num_wire_bits":     686,
+         "num_pub_wires":     49,
+         "num_pub_wire_bits": 243,
+         "num_ports":         13,
+         "num_port_bits":     35,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         644,
+         "area":              4036.371200,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 72,
+            "$_AND_": 3,
+            "$_MUX_": 256,
+            "$_NAND_": 8,
+            "$_NOR_": 1,
+            "$_NOT_": 25,
+            "$_ORNOT_": 4,
+            "$_OR_": 33,
+            "$_XNOR_": 20,
+            "$_XOR_": 44,
+            "sky130_fd_sc_hd__dfrtp_2": 48,
+            "sky130_fd_sc_hd__dfstp_2": 2,
+            "sky130_fd_sc_hd__dfxtp_2": 128
+         }
+      }
+}
+
+130. Printing statistics.
+
+=== async_fifo ===
+
+   Number of wires:                485
+   Number of wire bits:            686
+   Number of public wires:          49
+   Number of public wire bits:     243
+   Number of ports:                 13
+   Number of port bits:             35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                644
+     $_ANDNOT_                      72
+     $_AND_                          3
+     $_MUX_                        256
+     $_NAND_                         8
+     $_NOR_                          1
+     $_NOT_                         25
+     $_ORNOT_                        4
+     $_OR_                          33
+     $_XNOR_                        20
+     $_XOR_                         44
+     sky130_fd_sc_hd__dfrtp_2       48
+     sky130_fd_sc_hd__dfstp_2        2
+     sky130_fd_sc_hd__dfxtp_2      128
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+   Chip area for module '\async_fifo': 4036.371200
+     of which used for sequential elements: 4036.371200 (100.00%)
+
+[INFO] Using generated ABC script '/home/angesh/async_fifo/runs/fifo_pd/06-yosys-synthesis/AREA_0.abc'…
+
+131. Executing ABC pass (technology mapping using ABC).
+
+131.1. Extracting gate netlist of module `\async_fifo' to `/tmp/yosys-abc-qSoqEV/input.blif'..
+Extracted 466 gates and 644 wires to a netlist network with 178 inputs and 158 outputs.
+
+131.1.1. Executing ABC.
+Running ABC command: "/nix/store/6l3aj1gi4lja8z5s4lan2k2cfz9mqkrz-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-qSoqEV/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-qSoqEV/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-qSoqEV/input.blif 
+ABC: + read_lib -w /home/angesh/async_fifo/runs/fifo_pd/tmp/a6e10b224c1b47cdb8cec12c9825f6e1.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.04 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/angesh/async_fifo/runs/fifo_pd/tmp/a6e10b224c1b47cdb8cec12c9825f6e1.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.06 sec
+ABC: Memory =    9.54 MB. Time =     0.06 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /home/angesh/async_fifo/runs/fifo_pd/06-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2/Y".
+ABC: Setting output load to be 33.442001.
+ABC: + source /home/angesh/async_fifo/runs/fifo_pd/06-yosys-synthesis/AREA_0.abc 
+ABC: Error: The network is combinational.
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_2/Y) in the library.
+ABC: WireLoad = "none"  Gates =    327 (  2.8 %)   Cap = 16.4 ff ( 17.4 %)   Area =     3843.69 ( 41.9 %)   Delay =  2534.04 ps  (  8.6 %)               
+ABC: Path  0 --       2 : 0    2 pi                       A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  17.5 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     346 : 2    4 sky130_fd_sc_hd__xnor2_2 A =  16.27  Df = 254.8  -97.8 ps  S = 290.9 ps  Cin =  8.5 ff  Cout =  19.4 ff  Cmax = 121.8 ff  G =  218  
+ABC: Path  2 --     349 : 2    3 sky130_fd_sc_hd__xor2_2  A =  16.27  Df = 549.5 -205.8 ps  S = 221.2 ps  Cin =  8.6 ff  Cout =  14.6 ff  Cmax = 130.0 ff  G =  164  
+ABC: Path  3 --     351 : 2    3 sky130_fd_sc_hd__xnor2_2 A =  16.27  Df = 787.2 -189.8 ps  S = 280.4 ps  Cin =  8.5 ff  Cout =  18.4 ff  Cmax = 121.8 ff  G =  210  
+ABC: Path  4 --     353 : 2    4 sky130_fd_sc_hd__xor2_2  A =  16.27  Df = 967.1 -104.3 ps  S = 186.2 ps  Cin =  8.6 ff  Cout =  11.4 ff  Cmax = 130.0 ff  G =  126  
+ABC: Path  5 --     355 : 3    3 sky130_fd_sc_hd__a21o_2  A =   8.76  Df =1201.9  -91.6 ps  S =  61.7 ps  Cin =  2.4 ff  Cout =   9.5 ff  Cmax = 309.5 ff  G =  388  
+ABC: Path  6 --     358 : 3    4 sky130_fd_sc_hd__a21o_2  A =   8.76  Df =1435.5 -173.6 ps  S =  72.0 ps  Cin =  2.4 ff  Cout =  11.9 ff  Cmax = 309.5 ff  G =  487  
+ABC: Path  7 --     360 : 4    4 sky130_fd_sc_hd__a211o_2 A =  10.01  Df =1796.8 -377.0 ps  S =  71.9 ps  Cin =  2.4 ff  Cout =  11.9 ff  Cmax = 325.0 ff  G =  488  
+ABC: Path  8 --     374 : 5    1 sky130_fd_sc_hd__a32o_2  A =  11.26  Df =2061.6 -374.5 ps  S =  44.4 ps  Cin =  2.3 ff  Cout =   2.7 ff  Cmax = 264.6 ff  G =  105  
+ABC: Path  9 --     375 : 5    1 sky130_fd_sc_hd__a32o_2  A =  11.26  Df =2278.0 -251.8 ps  S =  38.3 ps  Cin =  2.3 ff  Cout =   1.5 ff  Cmax = 264.6 ff  G =   62  
+ABC: Path 10 --     376 : 2    1 sky130_fd_sc_hd__and2_2  A =   7.51  Df =2534.0 -267.6 ps  S = 180.8 ps  Cin =  1.5 ff  Cout =  33.4 ff  Cmax = 303.0 ff  G = 2288  
+ABC: Start-point = pi1 (\rd_bin_sync [4]).  End-point = po0 (\afull_next).
+ABC: netlist                       : i/o =  178/  158  lat =    0  nd =   327  edge =   1005  area =3843.88  delay =10.00  lev = 10
+ABC: + write_blif /tmp/yosys-abc-qSoqEV/output.blif 
+
+131.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:        9
+ABC RESULTS:   sky130_fd_sc_hd__o211ai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a2bb2o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a211o_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o21ba_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand3_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__and3b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21bo_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21o_2 cells:        9
+ABC RESULTS:   sky130_fd_sc_hd__nor3b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or3_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__o21a_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o31a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a32o_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__or4b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:        9
+ABC RESULTS:   sky130_fd_sc_hd__o221a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__and3_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__and2b_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_2 cells:       21
+ABC RESULTS:   sky130_fd_sc_hd__xor2_2 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__mux4_2 cells:       39
+ABC RESULTS:   sky130_fd_sc_hd__nand2_2 cells:        9
+ABC RESULTS:   sky130_fd_sc_hd__nand3b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or2_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__or3b_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:       30
+ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:      139
+ABC RESULTS:        internal signals:      308
+ABC RESULTS:           input signals:      178
+ABC RESULTS:          output signals:      158
+Removing temp directory.
+
+132. Executing SETUNDEF pass (replace undef values with defined constants).
+
+133. Executing HILOMAP pass (mapping to constant drivers).
+
+134. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+135. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \async_fifo..
+Removed 0 unused cells and 663 unused wires.
+<suppressed ~21 debug messages>
+
+136. Executing INSBUF pass (insert buffer cells for connected wires).
+
+137. Executing CHECK pass (checking for obvious problems).
+Checking module async_fifo...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /home/angesh/async_fifo/runs/fifo_pd/tmp/a6e10b224c1b47cdb8cec12c9825f6e1.lib ",
+   "modules": {
+      "\\async_fifo": {
+         "num_wires":         506,
+         "num_wire_bits":     528,
+         "num_pub_wires":     201,
+         "num_pub_wire_bits": 223,
+         "num_ports":         13,
+         "num_port_bits":     35,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         505,
+         "area":              7880.057600,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a211o_2": 2,
+            "sky130_fd_sc_hd__a21bo_2": 1,
+            "sky130_fd_sc_hd__a21o_2": 9,
+            "sky130_fd_sc_hd__a21oi_2": 5,
+            "sky130_fd_sc_hd__a2bb2o_2": 1,
+            "sky130_fd_sc_hd__a32o_2": 4,
+            "sky130_fd_sc_hd__and2_2": 9,
+            "sky130_fd_sc_hd__and2b_2": 4,
+            "sky130_fd_sc_hd__and3_2": 5,
+            "sky130_fd_sc_hd__and3b_2": 1,
+            "sky130_fd_sc_hd__dfrtp_2": 48,
+            "sky130_fd_sc_hd__dfstp_2": 2,
+            "sky130_fd_sc_hd__dfxtp_2": 128,
+            "sky130_fd_sc_hd__inv_2": 9,
+            "sky130_fd_sc_hd__mux2_1": 139,
+            "sky130_fd_sc_hd__mux4_2": 39,
+            "sky130_fd_sc_hd__nand2_2": 9,
+            "sky130_fd_sc_hd__nand2b_2": 3,
+            "sky130_fd_sc_hd__nand3_2": 4,
+            "sky130_fd_sc_hd__nand3b_2": 1,
+            "sky130_fd_sc_hd__nor2_2": 30,
+            "sky130_fd_sc_hd__nor3b_2": 1,
+            "sky130_fd_sc_hd__o211ai_2": 1,
+            "sky130_fd_sc_hd__o21a_2": 2,
+            "sky130_fd_sc_hd__o21ai_2": 2,
+            "sky130_fd_sc_hd__o21ba_2": 1,
+            "sky130_fd_sc_hd__o221a_2": 1,
+            "sky130_fd_sc_hd__o31a_2": 1,
+            "sky130_fd_sc_hd__or2_2": 5,
+            "sky130_fd_sc_hd__or3_2": 3,
+            "sky130_fd_sc_hd__or3b_2": 3,
+            "sky130_fd_sc_hd__or4b_2": 1,
+            "sky130_fd_sc_hd__xnor2_2": 21,
+            "sky130_fd_sc_hd__xor2_2": 10
+         }
+      }
+   },
+      "design": {
+         "num_wires":         506,
+         "num_wire_bits":     528,
+         "num_pub_wires":     201,
+         "num_pub_wire_bits": 223,
+         "num_ports":         13,
+         "num_port_bits":     35,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         505,
+         "area":              7880.057600,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a211o_2": 2,
+            "sky130_fd_sc_hd__a21bo_2": 1,
+            "sky130_fd_sc_hd__a21o_2": 9,
+            "sky130_fd_sc_hd__a21oi_2": 5,
+            "sky130_fd_sc_hd__a2bb2o_2": 1,
+            "sky130_fd_sc_hd__a32o_2": 4,
+            "sky130_fd_sc_hd__and2_2": 9,
+            "sky130_fd_sc_hd__and2b_2": 4,
+            "sky130_fd_sc_hd__and3_2": 5,
+            "sky130_fd_sc_hd__and3b_2": 1,
+            "sky130_fd_sc_hd__dfrtp_2": 48,
+            "sky130_fd_sc_hd__dfstp_2": 2,
+            "sky130_fd_sc_hd__dfxtp_2": 128,
+            "sky130_fd_sc_hd__inv_2": 9,
+            "sky130_fd_sc_hd__mux2_1": 139,
+            "sky130_fd_sc_hd__mux4_2": 39,
+            "sky130_fd_sc_hd__nand2_2": 9,
+            "sky130_fd_sc_hd__nand2b_2": 3,
+            "sky130_fd_sc_hd__nand3_2": 4,
+            "sky130_fd_sc_hd__nand3b_2": 1,
+            "sky130_fd_sc_hd__nor2_2": 30,
+            "sky130_fd_sc_hd__nor3b_2": 1,
+            "sky130_fd_sc_hd__o211ai_2": 1,
+            "sky130_fd_sc_hd__o21a_2": 2,
+            "sky130_fd_sc_hd__o21ai_2": 2,
+            "sky130_fd_sc_hd__o21ba_2": 1,
+            "sky130_fd_sc_hd__o221a_2": 1,
+            "sky130_fd_sc_hd__o31a_2": 1,
+            "sky130_fd_sc_hd__or2_2": 5,
+            "sky130_fd_sc_hd__or3_2": 3,
+            "sky130_fd_sc_hd__or3b_2": 3,
+            "sky130_fd_sc_hd__or4b_2": 1,
+            "sky130_fd_sc_hd__xnor2_2": 21,
+            "sky130_fd_sc_hd__xor2_2": 10
+         }
+      }
+}
+
+138. Printing statistics.
+
+=== async_fifo ===
+
+   Number of wires:                506
+   Number of wire bits:            528
+   Number of public wires:         201
+   Number of public wire bits:     223
+   Number of ports:                 13
+   Number of port bits:             35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                505
+     sky130_fd_sc_hd__a211o_2        2
+     sky130_fd_sc_hd__a21bo_2        1
+     sky130_fd_sc_hd__a21o_2         9
+     sky130_fd_sc_hd__a21oi_2        5
+     sky130_fd_sc_hd__a2bb2o_2       1
+     sky130_fd_sc_hd__a32o_2         4
+     sky130_fd_sc_hd__and2_2         9
+     sky130_fd_sc_hd__and2b_2        4
+     sky130_fd_sc_hd__and3_2         5
+     sky130_fd_sc_hd__and3b_2        1
+     sky130_fd_sc_hd__dfrtp_2       48
+     sky130_fd_sc_hd__dfstp_2        2
+     sky130_fd_sc_hd__dfxtp_2      128
+     sky130_fd_sc_hd__inv_2          9
+     sky130_fd_sc_hd__mux2_1       139
+     sky130_fd_sc_hd__mux4_2        39
+     sky130_fd_sc_hd__nand2_2        9
+     sky130_fd_sc_hd__nand2b_2       3
+     sky130_fd_sc_hd__nand3_2        4
+     sky130_fd_sc_hd__nand3b_2       1
+     sky130_fd_sc_hd__nor2_2        30
+     sky130_fd_sc_hd__nor3b_2        1
+     sky130_fd_sc_hd__o211ai_2       1
+     sky130_fd_sc_hd__o21a_2         2
+     sky130_fd_sc_hd__o21ai_2        2
+     sky130_fd_sc_hd__o21ba_2        1
+     sky130_fd_sc_hd__o221a_2        1
+     sky130_fd_sc_hd__o31a_2         1
+     sky130_fd_sc_hd__or2_2          5
+     sky130_fd_sc_hd__or3_2          3
+     sky130_fd_sc_hd__or3b_2         3
+     sky130_fd_sc_hd__or4b_2         1
+     sky130_fd_sc_hd__xnor2_2       21
+     sky130_fd_sc_hd__xor2_2        10
+
+   Chip area for module '\async_fifo': 7880.057600
+     of which used for sequential elements: 4036.371200 (51.22%)
+
+139. Executing Verilog backend.
+Dumping module `\async_fifo'.
+
+140. Executing JSON backend.

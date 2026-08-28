@@ -1,0 +1,40 @@
+Reading technology LEF file at '/home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__max.tlef'…
+[INFO ODB-0227] LEF file: /home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__max.tlef, created 14 layers, 25 vias
+Reading cell LEF file at '/home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef'…
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef at line 2.
+
+[INFO ODB-0227] LEF file: /home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef, created 437 library cells
+Reading cell LEF file at '/home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef'…
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef at line 2.
+
+[INFO ODB-0227] LEF file: /home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef, created 4 library cells
+[INFO ODB-0127] Reading DEF file: /home/angesh/async_fifo/runs/fifo_pd/98-odb-cellfrequencytables/async_fifo.def
+[INFO ODB-0128] Design: async_fifo
+[INFO ODB-0130]     Created 37 pins.
+[INFO ODB-0131]     Created 2279 components and 10984 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 8586 connections.
+[INFO ODB-0133]     Created 754 nets and 2383 connections.
+[INFO ODB-0134] Finished DEF file: /home/angesh/async_fifo/runs/fifo_pd/98-odb-cellfrequencytables/async_fifo.def
+Using RCX ruleset '/home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/rules.openrcx.sky130A.max.calibre'…
+[INFO RCX-0431] Defined process_corner CURRENT_CORNER with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner CURRENT_CORNER
+[INFO RCX-0435] Reading extraction model file /home/angesh/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/rules.openrcx.sky130A.max.calibre ...
+[INFO RCX-0436] RC segment generation async_fifo (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 3479 rc segments
+[INFO RCX-0439] Coupling Cap extraction async_fifo ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 52% of 4798 wires extracted
+[INFO RCX-0442] 100% of 4798 wires extracted
+[INFO RCX-0045] Extract 754 nets, 4232 rsegs, 4232 caps, 5218 ccs
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                              1268    9447.81
+  Tap cell                                265     331.57
+  Standard cell                           746    9683.04
+  Total                                  2279   19462.42
+Writing extracted parasitics to '/home/angesh/async_fifo/runs/fifo_pd/99-openroad-rcx/max/async_fifo.max.spef'…
+[INFO RCX-0443] 754 nets finished

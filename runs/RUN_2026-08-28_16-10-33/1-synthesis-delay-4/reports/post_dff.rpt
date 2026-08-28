@@ -1,0 +1,42 @@
+130. Printing statistics.
+
+=== async_fifo ===
+
+   Number of wires:                485
+   Number of wire bits:            686
+   Number of public wires:          49
+   Number of public wire bits:     243
+   Number of ports:                 13
+   Number of port bits:             35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                644
+     $_ANDNOT_                      72
+     $_AND_                          3
+     $_MUX_                        256
+     $_NAND_                         8
+     $_NOR_                          1
+     $_NOT_                         25
+     $_ORNOT_                        4
+     $_OR_                          33
+     $_XNOR_                        20
+     $_XOR_                         44
+     sky130_fd_sc_hd__dfrtp_2       48
+     sky130_fd_sc_hd__dfstp_2        2
+     sky130_fd_sc_hd__dfxtp_2      128
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+   Chip area for module '\async_fifo': 4036.371200
+     of which used for sequential elements: 4036.371200 (100.00%)
+
