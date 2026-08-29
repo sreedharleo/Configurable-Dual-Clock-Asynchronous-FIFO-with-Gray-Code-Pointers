@@ -62,3 +62,37 @@ DATA IN  ───────>  FIFO MEMORY  ───────>  DATA OUT
                         |
                         v
                  WRITE CLOCK DOMAIN
+<img width="1600" height="850" alt="WhatsApp Image 2026-08-29 at 08 46 53" src="https://github.com/user-attachments/assets/040a4c1a-50f7-42a8-985f-7af83b42d510" />
+GTKWave Functional Simulation
+
+The functional behavior of the asynchronous FIFO was verified using **GTKWave**. The waveform shown below is generated from the FIFO simulation (`async_fifo.vcd`) and covers approximately **0 ns to 821 ns** of simulation time.
+
+The waveform demonstrates the independent operation of the read and write clock domains, FIFO pointer movement, Gray-code conversion, pointer synchronization, FIFO status flags, and data transfer.
+
+### GTKWave Waveform
+
+The simulation waveform contains signals from the asynchronous FIFO testbench and DUT, including:
+
+- Write clock and read clock
+- Write enable and read enable
+- Write data and read data
+- Binary write pointer
+- Binary read pointer
+- Gray-coded write pointer
+- Gray-coded read pointer
+- Synchronized Gray-coded pointers
+- FIFO write/read counters
+- FULL and EMPTY flags
+- Almost-FULL and Almost-EMPTY flags
+- Programmable threshold values
+- Reset signal
+
+### Important Signals Observed
+
+#### 1. Independent Clock Domains
+
+The waveform contains two independent clocks:
+
+```text
+wr_clk
+rd_clk
