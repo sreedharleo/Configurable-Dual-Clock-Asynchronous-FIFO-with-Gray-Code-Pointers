@@ -1,5 +1,5 @@
 Asynchronous FIFO – RTL Design to Physical Implementation
-📌 Project Overview
+ Project Overview
 
 This project implements a parameterized Asynchronous FIFO (First-In First-Out) for reliable data transfer between two independent clock domains.
 
@@ -37,7 +37,7 @@ Power Analysis
 Physical Verification
     ↓
 Final GDSII
-🎯 Project Objectives
+Project Objectives
 
 The main objectives of this project are:
 
@@ -61,7 +61,7 @@ Routing
 Perform Static Timing Analysis (STA).
 Perform power analysis.
 Perform final physical verification and generate the final GDSII output.
-🏗️ Why Asynchronous FIFO?
+Why Asynchronous FIFO?
 
 In modern SoCs and digital systems, different blocks may operate at different clock frequencies.
 
@@ -90,7 +90,7 @@ Directly transferring control signals between unrelated clock domains can cause 
 
 An asynchronous FIFO provides a controlled mechanism for transferring data between these independent clock domains.
 
-🔄 Clock Domain Crossing (CDC)
+Clock Domain Crossing (CDC)
 
 CDC is one of the most important concepts in this project.
 
@@ -119,7 +119,7 @@ The FIFO memory stores the actual data.
 
 The information crossing the clock domains is mainly the read and write pointer information.
 
-🧠 Why Gray Code is Used
+Why Gray Code is Used
 
 The binary read and write pointers are converted into Gray code before crossing the clock domain.
 
@@ -145,7 +145,7 @@ Gray Code Conversion
 2-FF Synchronizer
       ↓
 Receiving Clock Domain
-🔐 Two Flip-Flop Synchronizer
+Two Flip-Flop Synchronizer
 
 A two-flip-flop synchronizer is used to reduce the probability of metastability propagating into the receiving clock domain.
 
@@ -174,7 +174,7 @@ The purpose of the 2-FF synchronizer is to reduce the probability of metastabili
 
 It does not mathematically eliminate metastability.
 
-🧩 FIFO Architecture
+FIFO Architecture
 
 The design consists of the following major blocks:
 
@@ -206,7 +206,7 @@ The design consists of the following major blocks:
                        ┌─────┴─────┐
                        │           │
                   Write Data    Read Data
-✍️ RTL Design
+RTL Design
 
 The FIFO RTL is written in Verilog HDL.
 
@@ -221,7 +221,7 @@ Full detection
 Empty detection
 Almost-full detection
 Almost-empty detection
-📝 Write Operation
+Write Operation
 
 During a write operation:
 
@@ -245,7 +245,7 @@ The write pointer then advances to the next FIFO location.
 
 The binary write pointer is also converted to Gray code for CDC.
 
-📖 Read Operation
+Read Operation
 
 During a read operation:
 
@@ -259,7 +259,7 @@ The read pointer then advances to the next location.
 
 The read pointer is converted into Gray code before crossing into the write clock domain.
 
-🚫 Full Detection
+Full Detection
 
 The write side needs to know whether there is enough space to accept another data word.
 
@@ -271,7 +271,7 @@ full = 1
 
 Further write operations are prevented.
 
-📭 Empty Detection
+Empty Detection
 
 The read side needs to know whether valid data is available.
 
@@ -283,7 +283,7 @@ empty = 1
 
 Further read operations are prevented.
 
-⚠️ Almost-Full and Almost-Empty
+Almost-Full and Almost-Empty
 
 The design also implements early warning status signals.
 
@@ -297,7 +297,7 @@ Indicates that the FIFO is approaching the empty condition.
 
 These signals can be useful for controlling data flow before the FIFO reaches a critical condition.
 
-🧪 Functional Verification
+Functional Verification
 
 A dedicated testbench was developed to verify the FIFO functionality.
 
@@ -321,7 +321,7 @@ Total Reads  : 10
 Errors       : 0
 
 Result       : ALL TESTS PASSED
-📊 Simulation and Waveform Analysis
+Simulation and Waveform Analysis
 
 The design was simulated and the resulting signals were analyzed using GTKWave.
 
@@ -342,7 +342,7 @@ read_pointer
 
 The waveform confirms that the FIFO performs read and write operations correctly under independent clock domains.
 
-🏭 RTL-to-GDSII Physical Design Flow
+RTL-to-GDSII Physical Design Flow
 
 After functional verification, the design was taken through the physical implementation flow.
 
@@ -353,7 +353,8 @@ PDK              : sky130A
 Standard Cell    : sky130_fd_sc_hd
 Clock            : wr_clk
 Clock Period     : 10 ns
-1️⃣ Floorplanning
+
+1.Floorplanning
 
 The first major physical-design stage is floorplanning.
 
@@ -370,7 +371,8 @@ The final design reports:
 
 Die Area  : 24543.4
 Core Area : 19462.4
-2️⃣ Placement
+
+2️.Placement
 
 During placement, the synthesized standard cells are positioned inside the core area.
 
@@ -384,7 +386,8 @@ Appropriate utilization
 The reported standard-cell utilization is approximately:
 
 51.46%
-3️⃣ Clock Tree Synthesis
+
+3️.Clock Tree Synthesis
 
 Clock Tree Synthesis (CTS) creates a clock distribution network.
 
@@ -396,7 +399,7 @@ Timing
 
 CTS was completed as part of the physical implementation flow.
 
-4️⃣ Routing
+4️.Routing
 
 Routing connects the placed cells using metal layers and vias.
 
@@ -409,7 +412,8 @@ Antenna repair
 The final report shows:
 
 Antenna Violations = 0
-⏱️ Static Timing Analysis (STA)
+
+5.Static Timing Analysis (STA)
 
 Static Timing Analysis was performed after physical implementation.
 
@@ -434,7 +438,7 @@ Hold Violations  = 0
 
 The timing results indicate that no setup or hold timing violations were reported in the final metrics.
 
-⚡ Power Analysis
+6.Power Analysis
 
 Power analysis was performed for multiple PVT corners.
 
@@ -455,7 +459,7 @@ Total Power      ≈ 3.779 mW
 
 The project also generated power reports for multiple PVT corners.
 
-🔌 Power Grid Verification
+7.Power Grid Verification
 
 The power distribution network was checked for power-grid violations.
 
@@ -468,7 +472,8 @@ Power Grid Violations = 0
 The reported worst power-grid drop was approximately:
 
 Worst Drop ≈ 2.21 mV
-📐 Physical Verification
+
+8.Physical Verification
 
 The final physical implementation was checked for major physical-design issues.
 
@@ -487,7 +492,7 @@ Max Slew Violations   = 9
 
 These should be reported transparently rather than claiming that every design-rule metric is zero.
 
-📦 Final Design Outputs
+9.Final Design Outputs
 
 The completed physical-design run generated the following important outputs:
 
@@ -522,7 +527,8 @@ File	Purpose
 .odb	OpenROAD database
 metrics.csv	Final design metrics
 metrics.json	Machine-readable metrics
-🛠️ Tools Used
+
+Tools Used
 Tool	Purpose
 Verilog HDL	RTL design
 Simulation/Testbench	Functional verification
@@ -532,7 +538,8 @@ SkyWater SKY130	Target PDK
 Magic/KLayout	Physical/layout inspection and verification
 STA tools in the flow	Timing analysis
 Git/GitHub	Version control and project showcase
-📈 Final Project Results
+
+Final Project Results
 Parameter	Result
 Clock Period	10 ns
 Die Area	24543.4
@@ -611,7 +618,7 @@ Show the power report and total power.
 
 Show metrics.csv or metrics.json.
 
-🚀 Project Flow Summary
+Project Flow Summary
                  ASYNC FIFO RTL
                        │
                        ▼
@@ -652,7 +659,7 @@ Show metrics.csv or metrics.json.
                        │
                        ▼
                   Final GDSII
-🎓 Key Technical Concepts Demonstrated
+Key Technical Concepts Demonstrated
 
 This project demonstrates practical understanding of:
 
@@ -677,7 +684,8 @@ Power analysis
 Power-grid verification
 Antenna verification
 RTL-to-GDSII implementation
-👨‍💻 Conclusion
+
+Conclusion
 
 The project successfully demonstrates the implementation of an Asynchronous FIFO from RTL design through physical implementation.
 
