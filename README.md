@@ -125,14 +125,6 @@ The binary read and write pointers are converted into Gray code before crossing 
 
 The main advantage is that only one bit changes between consecutive Gray-code values.
 
-For example:
-
-Binary       Gray
-
-000          000
-001          001
-010          011
-011          010
 
 This makes pointer synchronization safer when crossing between asynchronous clock domains.
 
