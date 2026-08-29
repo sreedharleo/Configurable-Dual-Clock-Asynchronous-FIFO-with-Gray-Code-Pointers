@@ -539,27 +539,6 @@ Magic/KLayout	Physical/layout inspection and verification
 STA tools in the flow	Timing analysis
 Git/GitHub	Version control and project showcase
 
-Final Project Results
-Parameter	Result
-Clock Period	10 ns
-Die Area	24543.4
-Core Area	19462.4
-Standard Cell Utilization	~51.46%
-Total Power	~3.779 mW
-Setup WNS	0
-Setup TNS	0
-Hold WNS	0
-Hold TNS	0
-Setup Violations	0
-Hold Violations	0
-Antenna Violations	0
-Power Grid Violations	0
-Overall Design Violations	0
-Max Fanout Violations	8
-Max Slew Violations	9
-📸 Recommended GitHub Screenshots
-
-The following screenshots should be included in the repository to demonstrate the complete implementation:
 
 1. RTL Code
 
@@ -659,7 +638,7 @@ Project Flow Summary
                        │
                        ▼
                   Final GDSII
-Key Technical Concepts Demonstrated
+
 
 This project demonstrates practical understanding of:
 
@@ -696,7 +675,7 @@ Functional verification completed successfully with zero simulation errors. The 
 The final implementation generated the required physical-design outputs including DEF, GDS, LEF, SPEF, SDF, SPICE and OpenROAD database files.
 
 Overall, this project demonstrates a complete practical RTL-to-GDSII digital design flow for an asynchronous FIFO, with particular focus on safe clock-domain crossing and physical implementation.
-👨‍💻 Project Focus
+
 
 Domain: VLSI / RTL Design / Physical Design
 Design: Asynchronous FIFO
