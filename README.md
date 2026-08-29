@@ -696,3 +696,11 @@ Functional verification completed successfully with zero simulation errors. The 
 The final implementation generated the required physical-design outputs including DEF, GDS, LEF, SPEF, SDF, SPICE and OpenROAD database files.
 
 Overall, this project demonstrates a complete practical RTL-to-GDSII digital design flow for an asynchronous FIFO, with particular focus on safe clock-domain crossing and physical implementation.
+👨‍💻 Project Focus
+
+Domain: VLSI / RTL Design / Physical Design
+Design: Asynchronous FIFO
+HDL: Verilog
+Technology: SKY130
+PD Flow: OpenLane 2 / OpenROAD
+Final Output: GDSII
