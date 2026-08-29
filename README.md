@@ -131,30 +131,22 @@ This makes pointer synchronization safer when crossing between asynchronous cloc
 Therefore:
 
 Binary Pointer
+
       ↓
+      
 Gray Code Conversion
+
       ↓
+      
 2-FF Synchronizer
+
       ↓
+      
 Receiving Clock Domain
 Two Flip-Flop Synchronizer
 
 A two-flip-flop synchronizer is used to reduce the probability of metastability propagating into the receiving clock domain.
 
-Asynchronous Signal
-        │
-        ▼
-     ┌─────┐
-     │ FF1 │
-     └─────┘
-        │
-        ▼
-     ┌─────┐
-     │ FF2 │
-     └─────┘
-        │
-        ▼
-Receiving Domain
 
 The first flip-flop may experience metastability if the incoming signal changes close to the receiving clock edge.
 
